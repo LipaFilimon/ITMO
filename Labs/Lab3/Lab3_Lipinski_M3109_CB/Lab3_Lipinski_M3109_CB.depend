@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1507275824 source:c:\study\itmo\Си\labs\lab3\lab3_lipinski_m3109_cb\main.c
-	<stdio.h>
-	<math.h>
-	<stdlib.h>
-
