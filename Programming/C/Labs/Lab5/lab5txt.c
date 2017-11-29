@@ -27,10 +27,15 @@ int main ()
 
     int Matrixmultiplication[2][2];
 
-    Matrixmultiplication[0][0] = Matrix_1[0][0] * Matrix_2[0][0] + Matrix_1[0][1] * Matrix_2[1][0];
-    Matrixmultiplication[0][1] = Matrix_1[0][0] * Matrix_2[0][1] + Matrix_1[0][1] * Matrix_2[1][1];
-    Matrixmultiplication[1][0] = Matrix_1[1][0] * Matrix_2[0][0] + Matrix_1[1][1] * Matrix_2[1][0];
-    Matrixmultiplication[1][1] = Matrix_1[1][0] * Matrix_2[0][1] + Matrix_1[1][1] * Matrix_2[1][1];
+    for (d = 0; d < 2; d++)
+    {
+        for (t = 0; t < 2; t++)
+        {
+            for (i = 0; i < 2; i++) {
+                Matrixmultiplication[d][t] += Matrix_1[d][i] * Matrix_2[i][t];
+            }
+        }
+    }
 
     int d, t;
     for (d = 0; d < 2; d++)
