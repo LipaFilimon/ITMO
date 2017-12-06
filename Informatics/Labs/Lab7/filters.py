@@ -47,7 +47,7 @@ def Sepia(pixel):
         b = 255
     return r, g, b
 #Сепия с красным оттенком
-def Sepia_blue(pixel):
+def Sepia_red(pixel):
     K = 30 #Коэффициент 
     r, g, b = pixel
     S = (r + g + b) // 3 #Находим среднее значение
