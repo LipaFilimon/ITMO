@@ -1,10 +1,11 @@
-SELECT SP1.SalesPersonID AS First_SalesPerson,
-       SP2.SalesPersonID AS Second_SalesPerson	   
+SELECT 
+       One.SalesPersonID AS First, 
+	   Two.SalesPersonID AS Second  
 FROM 
-     Sales.SalesPerson AS SP1
+       Sales.SalesPerson AS One
 JOIN 
-     Sales.SalesPerson AS SP2
+       Sales.SalesPerson AS Two
 ON
-     SP1.CommissionPct=SP2.CommissionPct
-WHERE
-     SP1.SalesPersonID <> SP2.SalesPersonID 
+       One.CommissionPct=Two.CommissionPct
+WHERE 
+       One.SalesPersonID <> Two.SalesPersonID

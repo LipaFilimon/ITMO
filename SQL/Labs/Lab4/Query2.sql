@@ -1,10 +1,19 @@
-SELECT FirstCard.ContactID, FirstCard.CreditCardID  AS FirstCardID,
-       SecondCard.CreditCardID AS SecondCardID
+SELECT 
+       First.CardNumber AS FirstCreditCard, 
+	   Second.CardNumber AS SecondCreditCard,
+	   ContactID
 FROM 
-     Sales.ContactCreditCard AS FirstCard
+       Sales.CreditCard AS First
+JOIN
+       Sales.CreditCard AS Second
+ON     
+       First.CreditCardID=Second.CreditCardID
 JOIN 
-     Sales.ContactCreditCard AS SecondCard
-ON 
-     FirstCard.ContactID = SecondCard.ContactID
-WHERE 
-     FirstCard.CreditCardID <> SecondCard.CreditCardID
+       Sales.ContactCreditCard AS CCC
+ON     
+       Second.CreditCardID=CCC.CreditCardID
+WHERE  
+       First.CardNumber <> Second.CardNumber
+
+
+       
