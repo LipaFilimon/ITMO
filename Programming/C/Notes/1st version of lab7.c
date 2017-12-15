@@ -34,6 +34,11 @@ union Modem
     } bitStatus;
 } modem;
 
+/*char *sModem (int status) 
+{
+    return status == 1 ? "On" : "Off";
+}*/
+
 
 int main ()
 {
@@ -71,6 +76,10 @@ int main ()
     printf("PPP is %s\n", modem.bitStatus.PPP == 1 ? "On":"Off");
     printf("Link is %s\n", modem.bitStatus.Link == 1 ? "On":"Off");
 
+   /* printf("DSL is %s\n", sModem(modem.bitStatus.DSL));
+    printf("PPP is %s\n", sModem(modem.bitStatus.PPP));
+    printf("Link is %s\n", sModem(modem.bitStatus.Link));
+*/
     getchar();
 	return 0;
 }
