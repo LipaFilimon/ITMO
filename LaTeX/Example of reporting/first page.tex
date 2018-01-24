@@ -1,0 +1,51 @@
+%====================ПРЕАМБУЛА=============================
+\documentclass[10pt]{article}
+\usepackage[russian,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage{amssymb,amsmath,amsfonts,latexsym,mathtext}
+\usepackage{indentfirst} %делать отступ в начале параграфа
+
+\usepackage[dvips]{graphics}
+\usepackage{pgf}
+\usepackage{vmargin}
+
+\usepackage[left=3.4 cm,right=-0.8 cm,top=50mm,bottom=-10 cm]{geometry} 
+\usepackage{geometry}
+\geometry{paper=a5paper}
+
+%=================КОЛОНТИТУЛ================================
+\usepackage{fancyhdr} %загрузим пакет
+\pagestyle{fancy} %применим колонтитул
+\fancyhead{} %очистим хидер на всякий случай
+\fancyhead[C]{2.1. Матрицы и векторы}
+\fancyhead[L]{} 
+\fancyhead[R]{33} 
+\fancyfoot{}%футер будет пустой
+%============================================================
+\begin{document}
+ Часто удобно n-метровый вектор понимать как точку в n-ме-\linebreak рном пространстве. Таким образом, геометрической интерпрета-\linebreak цией вектора является точка . В этом смысле вектор-строка и\linebreak вектор-столбец не различаются . Используя геометрический язык,\linebreak    
+ мы будем поэтому часто векторы называть точками. В двумер-\linebreak ном и трёхмерном пространствах вектор удобно представлять\linebreak в виде направленного отрезка , идущего из начала координат\linebreak в точку , характеризующую вектор. В этом случае легко могут\linebreak быть проиллюстрированы такие операции над векторами , как\linebreak умножение на скаляр ( рис. 2.1) и сложение (рис. 2.2).
+
+\begin{figure}[h]
+\center{ \includegraphics[width=0.8\linewidth]{scan2}}
+\end{figure} 
+ \vspace{-3mm}
+\par\medskip Чтобы показать,что n-мерное пространство , являющееся\linebreak совокупностью всех n-мерных векторов , обладает свойствами \linebreak , аналогичными свойствам обычных двумерных и трёхмерных \linebreak пространств , введем для этого пространства понятия {\it системы\linebreak координат} и {\it расстояния} . Для этого рассмотрим n n-мерных\linebreak векторов\linebreak
+$ \textbf{e}_1=[1,0,...,0], \textbf{e}_2=[1,0,...,0],..., \textbf{e}_n=[1,0,...,0],$
+\linebreak
+называемых {\it единичными векторами} . Тогда любой n-мерный век-\linebreak тор может быть записан в виде
+
+ $\mspace{63mu} \textbf{a}=[a_1,...,a_n]=a_1\textbf{e}_1+a_2\textbf{e}_2+...+a_n\textbf{e}_n$ $\mspace{182mu } (2.2)$
+\vspace{-6mm}
+ \noindent 
+     \par\medskip     Говорят ,что вектор \textbf{а} является линейной комбинацией дан-\linebreak ных векторов $ \textbf{a}_1,...,\textbf{a}_k $, если существуют такие скаляры $\lambda_j$ , что\linebreak $a=\sum\limits_{j=1}^k \lambda_j a_j$. Из равенства (2.2) видно,что любой n-мерный век-\linebreak тор может быть представлен как линейная комбинация единич-\linebreak ных векторов. Единичные векторы могут быть использованы для\linebreak определения системы координат: оси координат в этой системе 
+ 
+\end{document}
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+%====================ПРЕАМБУЛА=============================
+\documentclass[a4paper,10pt]{article}
+\usepackage[warn]{mathtext}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{cmap}
+\usepackage{amsmath} 
+\usepackage[left=1.4cm,right=2.3cm,top=3.1cm,bottom=3cm]{geometry}
+%=================КОЛОНТИТУЛ================================
+\usepackage{fancyhdr} %загрузим пакет
+\pagestyle{fancy} %применим колонтитул
+\fancyhead{} %очистим хидер на всякий случай
+\fancyhead[LE,RO]{\thepage} %номер страницы слева сверху на четных и справа на нечетных
+\fancyhead[CO]{Степени гиперболических функций}
+\fancyhead[LO]{2.425} 
+\fancyhead[RO]{121} 
+\fancyfoot{} %футер будет пустой
+%============================================================
+\begin{document}       %вторая полоска в колонтитуле
+\begin{center}
+\vspace*{-15mm}
+\noindent
+\hrulefill
+\end{center}
+\vspace*{1mm}
+{\bf 2.424}
+\begin{enumerate}
+%1
+\item \mspace{30mu} $\displaystyle\int th^pxdx=-\dfrac{th^{p-1}x}{p-1}+\int th^{p-2}xdx $ $\mspace{170mu}[p\neq1]$ 
+ %%2
+\item \mspace{30mu} $\displaystyle\int th^{2n+1}xdx=\sum\limits_{k=1}^n\dfrac{(-1)^{k-1}}{2k}\dbinom nk\dfrac{1}{ch^{2k}x}+\ln chx=$ 
+
+$\displaystyle\mspace{138mu}=-\sum\limits_{k=1}^n\dfrac{th^{2n-2k+2}x}{2n-2k+2}+\ln chx$ 
+%%3
+\item \mspace{30mu} $\displaystyle\int th^{2n}xdx=-\sum\limits_{k=1}^n\dfrac{th^{2n-2k+1}x}{2n-2k+1}+x$  $\mspace{429mu}Гр1 (351)(12)$ 
+%%4
+\item \mspace{30mu} $\displaystyle\int cth^{p}xdx=-\dfrac{cth^{p-1}x}{p-1}+\int cth^{p-2}xdx$} $\mspace{147mu}[p\neq1]$
+%%5
+\item \mspace{30mu} $\displaystyle\int cth^{2n+1}xdx=-\sum\limits_{k=1}^n\frac{1}{2n}\dbinom nk\dfrac{1}{sh^{2k}x}+\ln shx=$ 
+
+$\displaystyle\mspace{145mu} =-\sum\limits_{k=1}^n\dfrac{cth^{2n-2k+2}x}{2n-2k+2}+\ln shx$ 
+%%6
+\item \mspace{30mu} $\displaystyle\int cth^{2n}xdx=-\sum\limits_{k=1}^n\dfrac{cth^{2n-2k+1}x}{2n-2k+1}+x  $} $\mspace{415mu}Гр1 (351)(14)$
+\end{enumerate}
+
+
+\begin{flushleft}
+ Формулы со степенями thx и cthx, равными n=1,2,3,4,см. {\bf 2.423} 17,{\bf 2.423} 22,{\ bf2.423} 27, {\bf 2.2423} 32, {\bf 2.2423} 33,{\bf 2.2423} 38,{\bf 2.2423} 43,{\bf 2.2423} 48.\vspace{3} 
+\end{flushleft}
+
+
+\begin{flushleft}
+ {\bf Степени гиперболических функций и гиперболические функции}
+ 
+ {\bf от линейных функций аргумента}
+ \end{flushleft}
+ \begin{flushleft}
+ {\bf 2.425}
+ \end{flushleft}
+\begin{enumerate}
+\item \mspace{30mu} $\displaystyle\int sh(ax+b)sh(cx+d)dx=\dfrac{1}{2(a+c)}sh[(a+c)x+b+d]-$
+ 
+ $\displaystyle\mspace{260mu}-\dfrac{1}{2(a-c)}sh[(a-c)x+b-d]$
+ 
+$\mspace{500mu} {[}a^2\neq{c^2}{]}$ $\mspace{166mu}Гр1 (352)(2a)$
+
+\item \mspace{30mu} $\displaystyle\int sh(ax+b)ch(cx+d)dx= \dfrac{1}{2(a+c)}ch[(a+c)x+b+d]+$
+
+$\displaystyle\mspace{260mu+}\dfrac{1}{2(a-c)}ch[(a-c)x+b-d]$
+
+$\mspace{500mu}  {[}a^2\neq{c^2}{]}$ $\mspace{166mu}Гр1 (352)(2c)$
+
+\item \mspace{30mu} $\displaystyle\int ch(ax+b)ch(cx+d)dx= \dfrac{1}{2(a+c)}sh[(a+c)x+b+d]+$
+
+ $\displaystyle\mspace{260mu+}\dfrac{1}{2(a-c)}sh[(a-c)x+b-d]$
+
+$\mspace{500mu}  {[}a^2\neq{c^2}{]}$ $\mspace{166mu}Гр1 (352)(2b)$
+\end{enumerate}
+
+ 
+
+
+
+
+
+
+\end{document}
+%\vspace{5} ОТСТУП !!!!!
+%\noindent   отмена красной строки
+%\mspace{число} отступ строки
+%$$\int ^0_1 x^2 dx$$

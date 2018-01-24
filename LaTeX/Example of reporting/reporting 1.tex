@@ -1,0 +1,439 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[warn]{mathtext}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{cmap}
+\usepackage{amsmath} 
+\usepackage{alltt}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{moreverb}
+\renewcommand\contentsname{Содержание} 
+\begin{document}
+\selectlanguage{russian}
+\begin{titlepage}
+\newpage
+\begin{center}
+\large Санкт-Петербургский политехнический университет Петра Великого\\ \hrulefill
+\end{center}
+\vspace{8em}
+\begin{center}
+\huge Отчёт по лабораторной работе\\ [10pt]
+\end{center}
+\vspace{2.5em}
+\begin{center}
+\large <<Редактирование учебно-научного текста в системе вёрстки \TeX >>\\
+\end{center}
+
+\vspace{6em}
+
+\begin{flushleft}
+\emph{Выполнил:} студент 1 курса 13633/1 группы Липинский Илья.\\
+\vspace{2.5em}
+\emph{Принял:}  \\
+\end{flushleft}
+
+\vspace{\fill}
+
+\begin{center}
+Санкт-Петербург 2017
+\end{center}
+
+\end{titlepage}
+\newpage
+\setcounter{page}{2} 
+%нумерация страниц \setcounter{page}{n}
+%\section*{\large Реферат}
+
+\begin{flushleft}
+{\LARGE \bf Реферат}
+\end{flushleft}
+
+\par\medskip
+   Преподавателем были выданы листки с заданием (скан учебно-научного текста), задача заключалась в том, чтобы в системе вёрстки \TeX набрать содержимое этих листов. Студенты, благодаря лекциям и учебной литературе, должны были изучить язык, синтаксис системы и выполнить лабораторную работу.
+\par\medskip В результате проделанной работы студент должен овладеть базовыми навыками работы в среде \TeX, также он должен сдать преподавателю отчет по лабораторной работе вместе с скопированными и исходными листами. 
+\par\medskip Эта работа будет полезна в образовательных целях всем студентам, так как навык владения системой вёрстки \TeX пригодится в написании научных статей, отчётов.
+\par\medskip Данный отчёт состоит из 17 листов, включая: 2а исходных листа и 2е копии 
+
+\newpage
+\renewcommand\contentsname{Содержание} 
+\tableofcontents
+\setcounter{page}{3}
+
+\newpage
+
+\section{Введение}
+
+ В лабораторной работе требовалось в системе вёрстки \TeX скопировать две страницы учебно-научного текста, выданные преподавателем, затем составить отчёт о проделанной работе, учтя ГОСТ 7.32-2001 (Структура и правила оформления отчетов о научно-ис\-сле\-до\-ва\-тель\-ской работе). Сложность заключалась в том, что прежде чем выполнять задание, требовалось изучить язык, синтаксис системы, после этого уже начать вёрстку лабораторной работы. \TeX -очень удобная система вёрстки текстовых документов. В учебное время студенты выполняют различные работы: лабораторные, самостоятельные, пишут статьи, делают презентации, отчёты. Все эти работы удобно реализовывать в \TeX, так как в итоге документ получается читабельным, структурированным и, в целом, хорошо оформленным. Исходя из этих убеждений, владение системной вёрстки \TeX - актуальный навык для студента.
+
+\section{Основная часть}
+   Перед студентом ставились следующие задачи:
+\begin{enumerate}
+\item Скачать и установить дистрибутив и редактор \TeX.
+\item Изучить язык, синтаксис системы.
+\item Выполнить лабораторную работу.
+\item Написать отчёт о проделанной работе.
+\end{enumerate}
+Рассмотрим установку дистрибутива и редактора в OC Windows 7. Для начала нам надо установить MiKTeX. MiKTeX — открытый дистрибутив TeX для платформы Windows. Одним из существенных достоинств MiKTeX является возможность автоматического об\-но\-вле\-ния установленных компонентов и пакетов. Переходим на официальный сайт miktex.org, далее во вкладку «Downloads», где выбираем подходящий инсталлятор (в моём случае это Basic MiKTeX Installer, 64-bit), скачиваем и начинаем установку. После завершения установки MiKTeX нам нужно скачать и установить редактор \TeX. 
+
+При выполнение работы я использовал Texmaker — кроссплатформенный открытый LaTeX-редактор. Переходим на официальный сайт xm1math.net/texmaker/, далее во вкладку «Downloads», где выбираем подходящий инсталлятор (в моём случае это Texmaker 4.5 for Windows Executable file for windows (xp, vista, seven, 8, 10)), скачиваем и начинаем установку. 
+    
+Для того, чтобы изучить язык и синтаксис системы, нужно прослушать лекции по данной теме, почитать литературу, а именно: К. В. Воронцов «\LaTeX в примерах», С.М.Львов\-ский «Набор и вёрстка в системе \LaTeX», Tobias Oetiker
+Hubert Partl, Irene Hyna и Elisabeth Schlegl «Не очень краткое введение в \ LaTeX или \LaTeX за 137 минут », опробовать и закрепить знания на практике.
+После закрепления полученных знаний можно приступать к выполнению лабораторной работы. 
+
+Создадим две папки, где будут находиться документы проектов первой и второй стра\-ницы и еще одну папку для отчёта по лабораторной. Для создания нового документа в программе Texmaker нажимаем кнопку "Создать". В этом документе мы будем набирать первую страницу. Начнём с того, что наберём весь текст, после вписываем формулы и примеры (и графики или рисунки, если требуется). 
+
+\newpage
+
+\begin{flushleft}
+{\LARGE \bf Особенности при работе с листами:}
+\end{flushleft}
+%\vspace{10mm}
+\begin{flushleft}
+{\Large Текст:}
+\end{flushleft}
+
+Для смены шрифтов используются команды вида \verb|\<имя шрифта>|, приведенные в следующей таблице:
+
+\verb|\mathrm| - прямой
+
+\verb|\mathbf| - полужирный
+
+\verb|\mathsf| - рубленый
+
+\verb|\mathit| - курсив
+
+\verb|\mathbb| - для обозначения множеств
+
+Все эти команды действуют на один следующий за ними символ. Если нужно изменить шрифт группы символов, то группу надо заключить в фигурные скобки. 
+
+Имеется восемь размеров шрифта, пронумерованных от 0 до 7 (по умолчанию - 3).
+Эти размеры соответствуют следующим директивам LaTeX:
+
+0 - \verb|\tiny| 
+
+1 - \verb|\small|
+
+2 -\verb| \normalsize| 
+
+3 - \verb|\large| 
+
+4 -\verb| \Large|
+
+5 - \verb|\LARGE |
+
+6 - \verb|\huge|
+
+7 - \verb|\Huge| 
+
+Все эти команды изменяют размер шрифт от места появления команды и до конца формулы (или до следующей команды смены размера шрифта). Если нужно изменить размер только части формулы, то нужно писать так \cite{1}\cite{2} :
+
+abcdefg -{\huge abcdefg}- abcdefg
+
+Пример применения команд:
+
+\verb|{\tiny ABCDEFG abcdefg}| \hspace{1cm}{\tiny ABCDEFG abcdefg}   
+
+\verb|{\small ABCDEFG abcdefg}| \hspace{1cm}{\small ABCDEFG abcdefg}  
+
+\verb|{\normalsize ABCDEFG abcdefg}| \hspace{1cm}{\normalsize ABCDEFG abcdefg}  
+
+\verb|{\large ABCDEFG abcdefg| \hspace{1cm}{\large ABCDEFG abcdefg}  
+
+\verb|{\Large ABCDEFG abcdefg}| \hspace{1cm}{\Large ABCDEFG abcdefg}  
+
+\verb|{\LARGE ABCDEFG abcdefg}| \hspace{1cm}{\LARGE ABCDEFG abcdefg}  
+
+\verb|{\huge ABCDEFG abcdefg}| \hspace{1cm}{\huge ABCDEFG abcdefg}  
+
+\verb|{\Huge ABCDEFG abcdefg}| \hspace{1cm}{\Huge ABCDEFG abcdefg}  
+
+\newpage
+\begin{flushleft}
+{\Large Формулы:}
+\end{flushleft}
+
+%\bigskip
+Чтобы печатать математические формулы, в преамбуле нужно подключить пакеты:  \verb|amssymb|, \verb|amsmath| и \verb|mathtext|.
+
+LaTeX включает в себя специальный режим для верстки математики.  . Математический текст внутри абзаца вводится между  $\backslash$( и  $\backslash$), между \texttt{\$} и \texttt{\$} или между  \verb|\begin{math}| или \verb|\end{math}|. \cite[3.1 Общие сведения, стр.49]{3} 
+
+При выполнении работы студент может столкнуться с громоздкой и сложной формулой, например , как в данной лабораторной работе:
+
+$\displaystyle\int th^{2n+1}xdx=\sum\limits_{k=1}^n\dfrac{(-1)^{k-1}}{2k}\dbinom nk\dfrac{1}{ch^{2k}x}+\ln chx=$ 
+
+Как же набирать такие формулы ? Для начала мы ставим два символа \texttt{\$}, далее мы будем набирать формулу между ними. 
+\begin{description}
+\item [Интеграл:] \verb|$\int$|
+\hspace{1cm}{$\displaystyle\int$}
+\item [Степени:] \verb|$th^{2n+1}$|
+\hspace{1cm}{$th^{2n+1}$}
+\item [Биномиальныe коэффициенты:] \verb|$C_n^k=\binom nk=\dbinom nk=\tbinom nk$|
+
+\hspace{1cm}{$C_n^k=\binom nk=\dbinom nk=\tbinom nk$}
+\item [Сумма (Сигма):] \verb|$\sum\limits_{k=1}^n$|
+\hspace{1cm}{$\sum\limits_{k=1}^n$}
+\item [Дробь:] \verb|$\dfrac{(-1)^{k-1}}{2k}$|
+\hspace{1cm}{$\dfrac{(-1)^{k-1}}{2k}$}
+\item [Функции:] Функции типа , имена которых принято набирать прямым шрифтом, набираются с помощью специальных команд, причем команда, как правило, совпадает с именем функции. \cite{2}
+
+\verb| \arg, \cos, \cosh, \cot, \coth, \csc,| 
+
+\verb| \det, \dim, \exp, \gcd, \hom, \inf,| 
+
+\verb| \ker, \lg, \ln, \log, \max, \min,| 
+
+\verb| \sec, \sin, \sinh, \sup, \tan, \tanh,| 
+
+\verb| \arg, \cos, \cosh, \cot, \coth, \csc,| 
+
+\verb| \arccos, \arcsin, \arctan|
+
+$\arg, \cos, \cosh, \cot, \coth, \csc,$
+
+$\det, \dim, \exp, \gcd, \hom, \inf,$
+
+$\ker, \lg, \ln, \log, \max, \min,$
+ 
+$\sec, \sin, \sinh, \sup, \linebreak \tan, \tanh,$
+
+$\arccos, \arcsin, \arctan
+$
+
+
+\end{description}
+
+
+После того, как мы перенесли всю информацию и данные с исходного листа, мы начинаем редактировать наш документ. В конце концов у нас должна получиться копия исходного листа. Затем повторяем всё то же самое со вторым листом. Когда лабораторная работа будет завершена, приступаем к отчёту. Создаём новый документ и начинаем набирать отчёт по строгому плану:
+\begin{enumerate}
+\item Титульный лист.
+\item Реферат.
+\item Содржание.
+\item Введение.
+\item Основная часть.
+\item Заключение.
+\item Список литературы.
+\item Приложения.
+\end{enumerate}
+На титульном листе должный быть указаны: организация, в которой выполнена работа, название работы, кто её выполнил, кто её принял, место и год. В реферате студент кратко описывает работу. В содержании указываются все отделы отчёта с номерами страниц. В введении описываются задачи лабораторной, её актуальность, но не указываются решения задач, которые будут написаны в основной части. В заключении студент должен написать то, что он добился в этой работе, описать результаты и оценить затраченное на выполнение лабораторной работы время. В списке литературы указываются литературные или э\-лек\-трон\-ные источники, а в приложении прилепляется исходный код.
+
+\newpage
+
+
+\section{Вывод}
+Чтобы изучить язык, разобраться с синтаксисом системы и "набить руку" мне потребовалось суммарно 12 часов. Чтобы выполнить лабораторную работу,сделать отчёт мне потребовалось около 45 часов. В итоге, я познакомился с системой компьютерной вёрстки TeX. При выполнении работы получил навык работы с этой системой , а так же узанл стандарты написания отчётов и ,собственно, написал свой первый отчёт. Всe полученные знания ,безусловно, пригодятся в будущем.
+
+\newpage
+\section{Источники}
+\begin{thebibliography}{9}
+
+	\bibitem{1}
+		С. М. Львовский,
+		\emph{Набор и вёрстка в системе \LaTeX},
+		3-е издание,исправленное и дополненное, 2003.
+
+	\bibitem{2}
+		К.В. Воронцов,
+		\emph{\LaTeX  в примерах},
+		16 декабря 2005.
+	
+	\bibitem{3}
+		Tobias Oetiker, Hubert Partl, Irene Hyna,Elisabeth Schlegl,
+		\emph{Не очень кратеок введение в \LaTeX  или \LaTeX  за 137 минут },
+		Версия 4.12, 13 апреля, 2003. Перевод:Б.Тоботрас, 22 мая 2003 г.
+
+\end{thebibliography}
+
+\newpage
+%\section{Приложения}
+
+\begin{flushright}
+
+\section{Приложение 1}
+\end{flushright}
+\newpage
+\setcounter{page}{11} 
+\begin{verbatim}
+%====================ПРЕАМБУЛА=============================
+\documentclass[10pt]{article}
+\usepackage[russian,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage{amssymb,amsmath,amsfonts,latexsym,mathtext}
+\usepackage{indentfirst} %делать отступ в начале параграфа
+
+\usepackage[dvips]{graphics}
+\usepackage{pgf}
+\usepackage{vmargin}
+
+\usepackage[left=3.4 cm,right=-0.8 cm,top=50mm,bottom=-10 cm]{geometry} 
+\usepackage{geometry}
+\geometry{paper=a5paper}
+
+%=================КОЛОНТИТУЛ================================
+\usepackage{fancyhdr} %загрузим пакет
+\pagestyle{fancy} %применим колонтитул
+\fancyhead{} %очистим хидер на всякий случай
+\fancyhead[C]{2.1. Матрицы и векторы}
+\fancyhead[L]{} 
+\fancyhead[R]{33} 
+\fancyfoot{}%футер будет пустой
+%============================================================
+\begin{document}
+ Часто удобно n-метровый вектор понимать как точку в n-ме-\linebreak рном пространстве. 
+ Таким образом, геометрической интерпрета-\linebreak цией вектора является точка .
+ В этом смысле вектор-строка и\linebreak вектор-столбец не различаются .
+ Используя геометрический язык,\linebreak    
+ мы будем поэтому часто векторы называть точками. 
+ В двумер-\linebreak ном и трёхмерном пространствах вектор удобно представлять
+ \linebreak в виде направленного отрезка , идущего из начала координат
+ \linebreak в точку , характеризующую вектор. В этом случае легко могут
+ \linebreak быть проиллюстрированы такие операции над векторами , как
+ \linebreak умножение на скаляр ( рис. 2.1) и сложение (рис. 2.2).
+
+\begin{figure}[h]
+\center{ \includegraphics[width=0.8\linewidth]{scan2}}
+\end{figure} 
+ \vspace{-3mm}
+\par\medskip Чтобы показать,что n-мерное пространство , являющееся\linebreak 
+совокупностью всех n-мерных векторов , обладает свойствами \linebreak , 
+аналогичными свойствам обычных двумерных и трёхмерных \linebreak пространств , 
+введем для этого пространства понятия {\it системы\linebreak координат} и 
+{\it расстояния} . Для этого рассмотрим n n-мерных\linebreak векторов\linebreak
+$ \textbf{e}_1=[1,0,...,0], \textbf{e}_2=[1,0,...,0],..., \textbf{e}_n=[1,0,...,0],$
+\linebreak
+называемых {\it единичными векторами} . Тогда любой n-мерный век-\linebreak
+ тор может быть записан в виде
+
+ $\mspace{63mu}
+  \textbf{a}=[a_1,...,a_n]=a_1\textbf{e}_1+a_2\textbf{e}_2+...+a_n\textbf{e}_n$
+   $\mspace{182mu } (2.2)$
+\vspace{-6mm}
+ \noindent 
+ \par\medskip     Говорят ,что вектор \textbf{а} является линейной комбинацией
+  дан-\linebreak ных векторов $ \textbf{a}_1,...,\textbf{a}_k $, если существуют 
+  такие скаляры $\lambda_j$ , что\linebreak
+   $a=\sum\limits_{j=1}^k \lambda_j a_j$. Из равенства (2.2) видно,
+   что любой n-мерный век-\linebreak тор может быть представлен как линейная 
+комбинация единич-\linebreak ных векторов. Единичные векторы могут быть 
+использованы для\linebreak определения системы координат: оси координат в этой системе 
+ 
+\end{document}
+
+
+
+\end{verbatim}
+
+\newpage
+
+Копия
+\newpage
+\begin{flushright}
+\section{Приложение 2}
+\end{flushright}
+\newpage
+\setcounter{page}{15} 
+\begin{verbatim}%====================ПРЕАМБУЛА=============================
+\documentclass[a4paper,10pt]{article}
+\usepackage[warn]{mathtext}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{cmap}
+\usepackage{amsmath} 
+\usepackage[left=1.4cm,right=2.3cm,top=3.1cm,bottom=3cm]{geometry}
+%=================КОЛОНТИТУЛ================================
+\usepackage{fancyhdr} %загрузим пакет
+\pagestyle{fancy} %применим колонтитул
+\fancyhead{} %очистим хидер на всякий случай
+\fancyhead[LE,RO]{\thepage} 
+\fancyhead[CO]{Степени гиперболических функций}
+\fancyhead[LO]{2.425} 
+\fancyhead[RO]{121} 
+\fancyfoot{} %футер будет пустой
+%============================================================
+\begin{document}       %вторая полоска в колонтитуле
+\begin{center}
+\vspace*{-15mm}
+\noindent
+\hrulefill
+\end{center}
+\vspace*{1mm}
+{\bf 2.424}
+\begin{enumerate}
+%1
+\item \mspace{30mu} $\displaystyle\int th^pxdx=-\dfrac{th^{p-1}x}{p-1}+
+\int th^{p-2}xdx $ $\mspace{170mu}[p\neq1]$ 
+ %%2
+\item \mspace{30mu} $\displaystyle\int th^{2n+1}xdx=\sum\limits_{k=1}^n
+\dfrac{(-1)^{k-1}}{2k}\dbinom nk\dfrac{1}{ch^{2k}x}+\ln chx=$ 
+
+$\displaystyle\mspace{138mu}=-\sum\limits_{k=1}^n
+\dfrac{th^{2n-2k+2}x}{2n-2k+2}+\ln chx$ 
+%%3
+\item \mspace{30mu} $\displaystyle\int th^{2n}xdx=-\sum\limits_{k=1}^n
+\dfrac{th^{2n-2k+1}x}{2n-2k+1}+x$  $\mspace{429mu}Гр1 (351)(12)$ 
+%%4
+\item \mspace{30mu} $\displaystyle\int cth^{p}xdx=-\dfrac{cth^{p-1}x}{p-1}+
+\int cth^{p-2}xdx$} $\mspace{147mu}[p\neq1]$
+%%5
+\item \mspace{30mu} $\displaystyle\int cth^{2n+1}xdx=-\sum\limits_{k=1}^n
+\frac{1}{2n}\dbinom nk\dfrac{1}{sh^{2k}x}+\ln shx=$ 
+
+$\displaystyle\mspace{145mu} =-\sum\limits_{k=1}^n
+\dfrac{cth^{2n-2k+2}x}{2n-2k+2}+\ln shx$ 
+%%6
+\item \mspace{30mu} $\displaystyle\int cth^{2n}xdx=-\sum\limits_{k=1}^n
+\dfrac{cth^{2n-2k+1}x}{2n-2k+1}+x  $} $\mspace{415mu}Гр1 (351)(14)$
+\end{enumerate}
+
+
+\begin{flushleft}
+ Формулы со степенями thx и cthx, равными n=1,2,3,4,см. {\bf 2.423} 17,{\bf 2.423} 
+ 22,{\ bf2.423} 27, {\bf 2.2423} 32, {\bf 2.2423} 33,{\bf 2.2423} 38,{\bf 2.2423}
+  43,{\bf 2.2423} 48.\vspace{3} 
+\end{flushleft}
+
+
+\begin{flushleft}
+ {\bf Степени гиперболических функций и гиперболические функции}
+ 
+ {\bf от линейных функций аргумента}
+ \end{flushleft}
+ \begin{flushleft}
+ {\bf 2.425}
+ \end{flushleft}
+\begin{enumerate}
+\item \mspace{30mu} $\displaystyle\int sh(ax+b)sh(cx+d)dx=
+\dfrac{1}{2(a+c)}sh[(a+c)x+b+d]-$
+ 
+ $\displaystyle\mspace{260mu}-\dfrac{1}{2(a-c)}sh[(a-c)x+b-d]$
+ 
+$\mspace{500mu} {[}a^2\neq{c^2}{]}$ $\mspace{166mu}Гр1 (352)(2a)$
+
+\item \mspace{30mu} $\displaystyle\int sh(ax+b)ch(cx+d)dx
+= \dfrac{1}{2(a+c)}ch[(a+c)x+b+d]+$
+
+$\displaystyle\mspace{260mu+}\dfrac{1}{2(a-c)}ch[(a-c)x+b-d]$
+
+$\mspace{500mu}  {[}a^2\neq{c^2}{]}$ $\mspace{166mu}Гр1 (352)(2c)$
+
+\item \mspace{30mu} $\displaystyle\int ch(ax+b)ch(cx+d)dx=
+ \dfrac{1}{2(a+c)}sh[(a+c)x+b+d]+$
+
+ $\displaystyle\mspace{260mu+}\dfrac{1}{2(a-c)}sh[(a-c)x+b-d]$
+
+$\mspace{500mu}  {[}a^2\neq{c^2}{]}$ $\mspace{166mu}Гр1 (352)(2b)$
+\end{enumerate}
+
+ 
+\end{document}
+
+\end{verbatim}
+
+\newpage
+
+Копия 
+
+\end{document}
